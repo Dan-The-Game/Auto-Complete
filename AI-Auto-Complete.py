@@ -48,13 +48,6 @@ def get_completion(prompt):
 
 def on_press(key):
     global text_buffer, cursor_pos, stop_flag, is_typing
-    
-    # 1. Critical lock: Ignore all input while AI is typing or if ESC is pressed
-    if is_typing:
-        return
-    if key == keyboard.Key.esc:
-        stop_flag = True
-        return False 
 
     try:
         # F2: Trigger AI Completion

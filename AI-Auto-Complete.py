@@ -1,11 +1,12 @@
 import time
+import os
 import random
 import threading
 from groq import Groq
 from pynput import keyboard
 
 # Configuration
-API_KEY = "YOUR_GROQ_API_KEY"
+API_KEY = os.environ.get("GROQ_API_KEY")
 MODEL = "llama-3.1-8b-instant"
 
 client = Groq(api_key=API_KEY)

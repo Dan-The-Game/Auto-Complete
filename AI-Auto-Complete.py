@@ -1,5 +1,4 @@
 import time
-import os
 import random
 import threading
 from groq import Groq
